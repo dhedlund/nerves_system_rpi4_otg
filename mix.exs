@@ -1,7 +1,7 @@
-defmodule NervesSystemRpi4.MixProject do
+defmodule NervesSystemRpi4OTG.MixProject do
   use Mix.Project
 
-  @app :nerves_system_rpi4
+  @app :nerves_system_rpi4_otg
   @version Path.join(__DIR__, "VERSION")
            |> File.read!()
            |> String.trim()
@@ -35,7 +35,7 @@ defmodule NervesSystemRpi4.MixProject do
     [
       type: :system,
       artifact_sites: [
-        {:github_releases, "nerves-project/#{@app}"}
+        {:github_releases, "dhedlund/#{@app}"}
       ],
       build_runner_opts: build_runner_opts(),
       platform: Nerves.System.BR,
@@ -58,7 +58,7 @@ defmodule NervesSystemRpi4.MixProject do
 
   defp description do
     """
-    Nerves System - Raspberry Pi 4
+    Nerves System - Raspberry Pi 4 w/ OTG support
     """
   end
 
@@ -66,7 +66,7 @@ defmodule NervesSystemRpi4.MixProject do
     [
       files: package_files(),
       licenses: ["Apache 2.0"],
-      links: %{"GitHub" => "https://github.com/nerves-project/#{@app}"}
+      links: %{"GitHub" => "https://github.com/dhedlund/#{@app}"}
     ]
   end
 
